@@ -1,4 +1,4 @@
-Author: Hanad Hirsi (Student ID: 101191986‌‌)
+Author: Hanad Hirsi 
 
 Purpose: The purpose of this program is to create a web application for ordering
 from multiple restaurants that stores its users, user order information, 
