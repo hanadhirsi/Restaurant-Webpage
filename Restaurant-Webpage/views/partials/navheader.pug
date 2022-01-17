@@ -1,0 +1,22 @@
+
+if session.loggedIn == false
+    div
+        a(href="/") Home  
+        |
+        a(href="/users") Users  
+        |
+        a(href="/register")  Register  
+        |
+        a(href="/login") Login  
+
+else 
+    div
+        a(href="/") Home  
+        |
+        a(href="/users") Users 
+        |
+        a(href="/orderform")  Orderform  
+        |
+        a(href=`/users/${session.userId}`) MyProfile  
+        |
+        a(href="/logout") Logout  

@@ -1,0 +1,36 @@
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    title Welcome To Suber Eats 
+body(class="background")
+
+    include ./partials/navheader
+
+    br
+    br
+
+    h1 Register Here 
+    
+    div 
+        label(for="username") Username: 
+        input(type="text" id="username")
+        br
+
+    br
+
+    div 
+        label(for="password") Password: 
+        input(type="password" id="password")  
+        br
+    br
+
+    div 
+        button(type="submit" id="createUser") Create Account
+        br
+
+    br
+    
+    div 
+        b Already have an account? 
+        a(href="/login")  Click here to login
+script(src="register.js")

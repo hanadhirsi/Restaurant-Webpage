@@ -1,0 +1,13 @@
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    title Welcome To Suber Eats 
+body
+
+    include ./partials/navheader
+    h2 Users List: 
+    
+    each user in users 
+        if(user.privacy == false)
+            a(href=`/users/${user.id}`) #{user.username}
+            br 

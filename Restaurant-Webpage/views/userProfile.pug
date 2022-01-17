@@ -1,0 +1,42 @@
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    title Welcome To Suber Eats 
+body
+
+    include ./partials/navheader
+
+    h2  Profile for: #{user.username}
+
+    if(user.id == session.userId)
+        div 
+            b Privacy Setting: 
+            br
+
+            
+            label(for="privacyOn") On 
+            if(user.privacy == true)
+                input(type="radio" id="privacyOn" name="privacy" checked="true")
+            else 
+                input(type="radio" id="privacyOn" name="privacy" checked="false")
+            br
+
+            label(for="privacyOff") Off 
+            if(user.privacy == true)
+                input(type="radio" id="privacyOff" name="privacy")
+            else
+                input(type="radio" id="privacyOff" name="privacy" checked="true")
+            br
+            br
+            button(type="submit" id=`${user.id}`) Save Changes
+
+    
+    div 
+        if(orders.length != 0)
+            h4 Order History: 
+
+            each order in orders
+                a(href=`/orders/${order.id}`) #{order.id} 
+                br
+
+script(src="../userProfile.js")
